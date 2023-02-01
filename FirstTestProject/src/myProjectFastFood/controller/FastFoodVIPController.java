@@ -61,7 +61,6 @@ public class FastFoodVIPController {
         System.out.println(DASHES);
     }
 
-
     private void printPizzaMenu() {
         System.out.println("1. Pizza Margherita - 16.90lv.");
         System.out.println("2. Pizza Pepperoni - 16.80lv");
