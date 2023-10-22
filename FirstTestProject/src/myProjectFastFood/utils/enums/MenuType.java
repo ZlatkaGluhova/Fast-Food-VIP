@@ -1,5 +1,10 @@
 package myProjectFastFood.utils.enums;
 
+import myProjectFastFood.model.Pizza;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public enum MenuType {
 
     PIZZA(1, "Pizza", "Пица"),
@@ -9,7 +14,8 @@ public enum MenuType {
     HOT_DOG(5, "Hot dog", "Хотдог"),
     GARNISHES_AND_SAUCES(6, "Garnishes And Sauces", "Гарнитури и сосове"),
     DRINKS(7, "Drinks", "Напитки"),
-    DESSERT(8, "Dessert", "Десерти");
+    DESSERT(8, "Dessert", "Десерти"),
+    EXIT(0, "Exit", "Изход");
 
     private int number;
     private String typeEN;
@@ -33,10 +39,10 @@ public enum MenuType {
         return typeBG;
     }
 
-    public static boolean checkNumber(int input){
+    public static boolean checkValidNumMenu(int input) {
         MenuType[] values = MenuType.values();
         for (int i = 0; i < values.length; i++) {
-            if (input == values[i].getNumber()){
+            if (input == values[i].getNumber()) {
                 return true;
             }
         }

@@ -1,6 +1,9 @@
 package com.demo.list;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class Demo {
@@ -61,25 +64,49 @@ public class Demo {
 ////        }
 ////        System.out.println(list);
 
-        Integer[] arr = new Integer[]{4, 4, 4, 2, 2, 6, 4, 3, 3, 2, 6, 5, 22, 33, 123};
+//        Integer[] arr = new Integer[]{4, 4, 4, 2, 2, 6, 4, 3, 3, 2, 6, 5, 22, 33, 123};
+//
+//
+//        List<Integer> numbers = new ArrayList<>(Arrays.asList(arr));
+//
+//        Collections.sort(numbers);
+//
+//        List<Integer> unicList = printGrades(numbers);
+//        System.out.println("---------------------------");
+//        printGradesReverse(unicList, numbers);
+//        System.out.println("---------------------------");
+//
+//        int[] result = evenOrOdd(numbers);
+//        printEvenOrOdd(result);
 
 
-        List<Integer> numbers = new ArrayList<>(Arrays.asList(arr));
+        Animall animal = new Animall();
+        animal.setName("Pesho");
+        animal.setAge(4);
+        Dog dog = new Dog();
 
-        Collections.sort(numbers);
+        dog.setLeg(3);
+        dog.setName("Rex");
+        dog.setAge(22);
 
-        List<Integer> unicList = printGrades(numbers);
-        System.out.println("---------------------------");
-        printGradesReverse(unicList, numbers);
-        System.out.println("---------------------------");
-
-        int[] result = evenOrOdd(numbers);
-        printEvenOrOdd(result);
-
+        Animall dog2 = new Dog();
 
 
+        AnimalBehavior cat = new Cat();
+        AnimalBehavior dog3 = new Dog();
+        cat.run();
+        System.out.println(animal);
+        System.out.println(dog);
+//        makePopup();
     }
 
+
+    private static void makePopup() {
+
+
+        String name = JOptionPane.showInputDialog(null, "Enter your name", "Adding name form", 1);
+        JOptionPane.showMessageDialog(null, "Hello " + name, "Your name", 1);
+    }
 
     //   System.out.printf("All Grades by %d is: %d", input, result);
 
